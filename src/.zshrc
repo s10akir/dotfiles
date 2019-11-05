@@ -35,6 +35,9 @@ export PATH=$PATH:/home/akkisino02/.gem/ruby/2.6.0/bin
 export GOPATH=$HOME/.go
 export PATH=$PATH:$HOME/.go/bin
 
+export BIN=~/.local/bin
+export PATH=$PATH:$BIN
+
 export EDITOR=vim
 
 setopt no_beep

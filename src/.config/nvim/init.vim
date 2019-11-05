@@ -77,6 +77,9 @@ if dein#load_state('~/.cache/dein')
   call dein#add('vim-scripts/fcitx.vim')
 "  call dein#add('clausreinke/typescript-tools')
 
+" nyaovim
+  call dein#add("rhysd/nyaovim-mini-browser")
+
   " Required:
   call dein#end()
   call dein#save_state()
@@ -90,6 +93,8 @@ syntax enable
 if dein#check_install()
   call dein#install()
 endif
+
+let g:dein#auto_recache = 1
 
 "End dein Scripts-------------------------
 
@@ -120,3 +125,5 @@ let g:seiya_auto_enable=1
 
 " Vueだけファイルの途中でハイライトが消えるので保存されてる
 autocmd FileType vue syntax sync fromstart
+
+" nyaovim周り

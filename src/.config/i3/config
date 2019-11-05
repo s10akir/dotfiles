@@ -11,11 +11,13 @@
 
 
 # gaps
-gaps inner 12
-gaps outer 2
-for_window [class="^."] border pixel 8
+gaps inner 20
+gaps outer 20
+for_window [class="^."] border pixel 0
 
 set $mod Mod1
+
+new_window pixel
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -262,19 +264,23 @@ for_window [title="TweetDeck"] floating disable
 exec --no-startup-id fcitx-autostart
 
 # compton
-#exec --no-startup-id compton --config ~/.config/compton/compton.conf
-exec --no-startup-id compton -b
+exec --no-startup-id compton -b --config ~/.config/compton/compton.conf
+#exec --no-startup-id compton -b
 bindsym $mod+d exec --no-startup-id sh -c "rofi -show run"
 
 # Autostart applications
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec --no-startup-id nm-applet
-#exec --no-startup-id dunst
-exec --no-startup-id xfce4-notifyd
-exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id /$HOME/.config/polybar/launch.sh
 exec_always screenrotator
+
+# gnome-i3
+exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
+exec_always --no-startup-id gnome-power-manager
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id gnome-flashback
+
