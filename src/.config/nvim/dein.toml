@@ -1,0 +1,14 @@
+[[plugins]]
+repo = 'autozimu/LanguageClient-neovim'
+depends = 'deoplete.nvim'
+on_ft = ['rust', 'vue']
+build = './install.sh'
+hook_source = '''
+set hidden
+let g:LanguageClient_serverCommands = {
+    \ 'vue': ['vls'],
+    \ 'go': ['go-langserver'],
+    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+    \ }
+let g:LanguageClient_autoStart = 1
+'''

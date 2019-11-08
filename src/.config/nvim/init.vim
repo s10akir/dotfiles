@@ -57,7 +57,6 @@ if dein#load_state('~/.cache/dein')
   call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here like this:
-  call dein#add('posva/vim-vue')
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('w0rp/ale')
@@ -80,10 +79,13 @@ if dein#load_state('~/.cache/dein')
 " nyaovim
   call dein#add("rhysd/nyaovim-mini-browser")
 
+  call dein#load_toml('~/.config/nvim/dein.toml', {'lazy': 0})  
+
   " Required:
   call dein#end()
   call dein#save_state()
 endif
+
 
 " Required:
 filetype plugin indent on

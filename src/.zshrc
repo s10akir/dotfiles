@@ -30,13 +30,13 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-export PATH=$PATH:/home/akkisino02/.gem/ruby/2.6.0/bin
+export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
 export GOPATH=$HOME/.go
 export PATH=$PATH:$HOME/.go/bin
 
 export BIN=~/.local/bin
-export PATH=$PATH:$BIN
+export PATH=$BIN:$PATH # .local/binで横取りしたいアプリのためにわざと前に定義
 
 export EDITOR=vim
 
@@ -57,3 +57,18 @@ alias commit='git commit'
 alias cat='bat'
 alias bkl='(){xbacklight $1 10}'
 alias noti='notify-send'
+
+repo() {
+  local dir
+  dir=$(ghq list > /dev/null | fzf --reverse +m) &&
+    cd $(ghq root)/$dir
+}
+
+proxy() {
+  export http_proxy=http://proxy.kmt.neec.ac.jp:8080
+  export HTTP_PROXY=http://proxy.kmt.neec.ac.jp:8080
+  export https_proxy=http://proxy.kmt.neec.ac.jp:8080
+  export HTTPS_PROXY=http://proxy.kmt.neec.ac.jp:8080
+}
+
+eval "$(hub alias -s)"
