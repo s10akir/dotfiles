@@ -30,7 +30,8 @@ font-0 = Hack:size=13;3
 font-1 = "Iosevka Nerd Font:pixelsize=14;3"
 font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=12;3"
 #font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=12;3"
-font-3 = "Font Awesome 5 Brands:pixelsize=12;3"
+#font-3 = "Font Awesome 5 Brands:pixelsize=12;3"
+font-3 = "Noto Sans CJK JP:pixelsize=14;3"
 
 ;--------;
 ; COLORS ;
@@ -53,8 +54,10 @@ modules-left = volume backlight battery
 modules-center = i3
 modules-right = wlan cpu-graph date time
 
-tray-position = none
-tray-detached = true
+tray-position = left
+tray-scale = 2.0
+tray-offset-y = -8
+tray-detached = false
 
 ;---------;
 ; MODULES ;
