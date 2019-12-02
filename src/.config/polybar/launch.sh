@@ -7,6 +7,8 @@ killall -q polybar
 while pgrep -x polybar >/dev/null; do sleep 1; done
 
 # Launch
-polybar main &
+for monitor in `xrandr -q | grep " connected" | cut -d ' ' -f1`; do
+  MONITOR=$monitor polybar main &
+done
 
 echo "Bar launched..."
