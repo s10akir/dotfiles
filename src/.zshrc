@@ -43,6 +43,9 @@ export EDITOR=vim
 setopt no_beep
 KEYTIMEOUT=1
 
+fpath=(~/.zsh/completions $fpath) 
+autoload -U compinit && compinit
+
 alias clip='xclip -selection clipboard -i'
 alias open='(){exec nautilus $1 > /dev/null 2>&1 &}'
 alias rubo='rubocop'
@@ -54,6 +57,7 @@ alias pull='git pull'
 alias push='git push'
 alias add='git add'
 alias commit='git commit'
+alias branch='git branch'
 alias cat='bat'
 alias bkl='(){xbacklight $1 10}'
 alias noti='notify-send'
@@ -72,3 +76,13 @@ proxy() {
 }
 
 eval "$(hub alias -s)"
+
+tatikaze() {
+  git config --local user.name "tatikaze"
+  git config --local user.email "k017c1356@it-neec.jp"
+}
+
+mojamoja() {
+  git config --local user.name "Akira Shinohara"
+  git config --local user.email "k017c1067@it-neec.jp"
+}

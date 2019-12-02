@@ -24,7 +24,7 @@ set hlsearch
 inoremap jj <Esc>
 noremap <Esc><Esc> :noh<CR>
 noremap ; :
-set clipboard=unnamed
+set clipboard+=unnamedplus
 set expandtab
 set shiftwidth=2
 set tabstop=2
@@ -39,6 +39,13 @@ noremap <Right> <Nop>
 
 " エスケープシーケンスの待機時間
 set ttimeoutlen=10
+
+autocmd InsertEnter   * !ogg123 -q -d pulse ~/tmp/random/chestopen.ogg &
+autocmd InsertLeave   * !ogg123 -q -d pulse ~/tmp/random/chestclosed.ogg &
+autocmd InsertCharPre * !ogg123 -q -d pulse ~/tmp/step/stone1.ogg &
+autocmd BufWrite      * !ogg123 -q -d pulse ~/tmp/random/levelup.ogg &
+autocmd VimLeave      * !ogg123 -q -d pulse ~/tmp/random/explode1.ogg &
+
 
 "dein Scripts-----------------------------
 if &compatible
@@ -60,7 +67,6 @@ if dein#load_state('~/.cache/dein')
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('w0rp/ale')
-  call dein#add('ayu-theme/ayu-vim')
   call dein#add('Shougo/deoplete.nvim')
   call dein#add('vim-airline/vim-airline')
   call dein#add('miyakogi/seiya.vim')
@@ -116,16 +122,8 @@ imap <expr><CR> neosnippet#expandable() ? "<Plug>(neosnippet_expand_or_jump)" : 
 
 set termguicolors
 
-" ayu
-"let ayucolor="light"
-"let ayucolor="dark"
-let ayucolor="mirage"
-colorscheme ayu
-
-" 背景透過（termguicolorsと排他）
-let g:seiya_auto_enable=1
-
 " Vueだけファイルの途中でハイライトが消えるので保存されてる
 autocmd FileType vue syntax sync fromstart
 
-" nyaovim周り
+let g:ale_sign_column_always = 1
+

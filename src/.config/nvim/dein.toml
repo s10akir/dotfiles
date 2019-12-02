@@ -12,3 +12,20 @@ let g:LanguageClient_serverCommands = {
     \ }
 let g:LanguageClient_autoStart = 1
 '''
+
+[[plugins]]
+repo = 'ayu-theme/ayu-vim'
+hook_add = '''
+"let ayucolor="light"
+"let ayucolor="dark"
+let ayucolor="mirage"
+
+colorscheme ayu
+'''
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+
+[[plugins]]
+repo = 'fatih/vim-go'
+
