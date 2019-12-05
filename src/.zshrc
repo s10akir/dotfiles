@@ -10,10 +10,11 @@ if [[ ! -n $TMUX ]]; then
   # get the IDs
   ID="`tmux list-sessions`"
   if [[ -z "$ID" ]]; then
-    tmux new-session && exit
+    #tmux new-session && exit
+    ID="(NO SESSIONS)"
   fi
   create_new_session="Create New Session"
-  ID="${create_new_session}\n$ID:"
+  ID="${create_new_session}\n$ID"
   ID="`echo $ID | fzf | cut -d: -f1`"
   if [[ "$ID" = "${create_new_session}" ]]; then
     tmux new-session && exit
@@ -43,6 +44,8 @@ export EDITOR=vim
 setopt no_beep
 KEYTIMEOUT=1
 
+xset -b
+
 fpath=(~/.zsh/completions $fpath) 
 autoload -U compinit && compinit
 
@@ -61,6 +64,7 @@ alias branch='git branch'
 alias cat='bat'
 alias bkl='(){xbacklight $1 10}'
 alias noti='notify-send'
+alias his='history -n -r 1 | fzf'
 
 repo() {
   local dir
@@ -74,6 +78,7 @@ proxy() {
   export https_proxy=http://proxy.kmt.neec.ac.jp:8080
   export HTTPS_PROXY=http://proxy.kmt.neec.ac.jp:8080
 }
+
 
 eval "$(hub alias -s)"
 
