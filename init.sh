@@ -1,28 +1,27 @@
 #! /bin/sh
 
-script_dir=`dirname $0`
-
-cd
+SCRIPT_DIR=$(cd $(dirname $0); pwd)
 
 # applications
 
 # zsh
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
-ln -s $script_dir/src/.zlogin
-ln -s $script_dir/src/.zlogout
-ln -s $script_dir/src/.zpreztorc
-ln -s $script_dir/src/.zprofile
-ln -s $script_dir/src/.zshenv
-ln -s $script_dir/src/.zshrc
+ln -s $SCRIPT_DIR/src/.zlogin $HOME
+ln -s $SCRIPT_DIR/src/.zlogout $HOME
+ln -s $SCRIPT_DIR/src/.zpreztorc $HOME
+ln -s $SCRIPT_DIR/src/.zprofile $HOME
+ln -s $SCRIPT_DIR/src/.zshenv $HOME
+ln -s $SCRIPT_DIR/src/.zshrc $HOME
 
 # nvim
-mkdir -p .config/nvim
-ln -s $script_dir/src/.config/nvim/init.vim .config/nvim/
+mkdir -p $HOME/.config/nvim
+ln -s $SCRIPT_DIR/src/.config/nvim/init.vim $HOME/.config/nvim/
+ln -s $SCRIPT_DIR/src/.config/nvim/dein.toml $HOME/.config/nvim/
 
 # i3
-mkdir -p .config/i3
-ln -s $script_dir/src/.config/i3/config .config/i3/
+mkdir -p $HOME/.config/i3
+ln -s $SCRIPT_DIR/src/.config/i3/config $HOME/.config/i3/
 
 # tmux
-ln -s $script_dir/src/.tmux.conf ~/
+ln -s $SCRIPT_DIR/src/.tmux.conf $HOME
