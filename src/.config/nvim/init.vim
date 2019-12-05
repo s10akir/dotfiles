@@ -40,11 +40,11 @@ noremap <Right> <Nop>
 " エスケープシーケンスの待機時間
 set ttimeoutlen=10
 
-autocmd InsertEnter   * !ogg123 -q -d pulse ~/tmp/random/chestopen.ogg &
-autocmd InsertLeave   * !ogg123 -q -d pulse ~/tmp/random/chestclosed.ogg &
-autocmd InsertCharPre * !ogg123 -q -d pulse ~/tmp/step/stone1.ogg &
-autocmd BufWrite      * !ogg123 -q -d pulse ~/tmp/random/levelup.ogg &
-autocmd VimLeave      * !ogg123 -q -d pulse ~/tmp/random/explode1.ogg &
+"autocmd InsertEnter   * !ogg123 -q -d pulse ~/tmp/random/chestopen.ogg &
+"autocmd InsertLeave   * !ogg123 -q -d pulse ~/tmp/random/chestclosed.ogg &
+"autocmd InsertCharPre * !ogg123 -q -d pulse ~/tmp/step/stone1.ogg &
+"autocmd BufWrite      * !ogg123 -q -d pulse ~/tmp/random/levelup.ogg &
+"autocmd VimLeave      * !ogg123 -q -d pulse ~/tmp/random/explode1.ogg &
 
 
 "dein Scripts-----------------------------
