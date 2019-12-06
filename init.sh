@@ -28,5 +28,9 @@ mkdir -p $HOME/.config/polybar
 ln -sf $SCRIPT_DIR/src/.config/polybar/config $HOME/.config/polybar/
 ln -sf $SCRIPT_DIR/src/.config/polybar/launch.sh $HOME/.config/polybar/
 
+# compton
+mkdir -p $HOME/.config/compton
+ln -sf $SCRIPT_DIR/src/.config/compton/compton.conf $HOME/.config/compton/
+
 # tmux
 ln -sf $SCRIPT_DIR/src/.tmux.conf $HOME
