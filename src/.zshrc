@@ -44,8 +44,6 @@ export EDITOR=vim
 setopt no_beep
 KEYTIMEOUT=1
 
-xset -b
-
 fpath=(~/.zsh/completions $fpath) 
 autoload -U compinit && compinit
 
