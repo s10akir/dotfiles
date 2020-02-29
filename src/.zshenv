@@ -10,5 +10,5 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
-export KSV_SAI='ag1954$it'
+export KSV_SAI='nbs4642;it'
 

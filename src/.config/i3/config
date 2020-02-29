@@ -17,7 +17,7 @@ for_window [class="^."] border pixel 0
 
 set $mod Mod1
 
-new_window pixel
+default_border pixel
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -46,8 +46,6 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 # brightness
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 11
-
-bindsym Print exec --no-startup-id spectacle
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -264,9 +262,11 @@ exec --no-startup-id fcitx-autostart
 
 #exec --no-startup-id compton -b
 bindsym $mod+d exec --no-startup-id sh -c "rofi -show run"
+bindsym Ctrl+Shift+Print exec --no-startup-id sh -c "gnome-scrennshot -a -c"
+bindsym Print exec --no-startup-id sh -c "pkill picom; gnome-screenshot; picom -b --config ~/.config/compton/compton.conf"
 
 # Autostart applications
-exec --no-startup-id nitrogen --restore; sleep 1; compton -b --config ~/.config/compton/compton.conf
+exec --no-startup-id nitrogen --restore; sleep 1; picom -b --config ~/.config/compton/compton.conf
 exec --no-startup-id nm-applet
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit

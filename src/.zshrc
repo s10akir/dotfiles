@@ -64,6 +64,7 @@ alias bkl='(){xbacklight $1 10}'
 alias noti='notify-send'
 alias his='history -n -r 1 | fzf'
 alias vim='docker run --rm -it -v "$(pwd)":/workdir -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY s10akir/moja-nvim:latest'
+alias temp='sensors | head -n 7 | tail -n 5'
 
 
 repo() {
