@@ -19,10 +19,10 @@ for f in `ls $SCRIPT_DIR/src/.config/`; do
       echo "[skip] $f is only linux config"
     else
       # Linuxのみ
-      ln -snfv $SCRIPT_DIR/src/.config/$f $HOME/.config/
+      ln -snfv $SCRIPT_DIR/src/.config/$f $HOME/.config
     fi
   else
     # mac Linux共通
-    ln -snfv $SCRIPT_DIR/src/.config/$f $HOME/.config/
+    ln -snfv $SCRIPT_DIR/src/.config/$f $HOME/.config
   fi
 done
