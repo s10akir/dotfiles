@@ -4,4 +4,4 @@
 [core]
 	editor = nvim
 [ghq]
-  root = .ghq
+  root = ~/.ghq
