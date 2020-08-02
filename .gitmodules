@@ -1,0 +1,3 @@
+[submodule "src/moja-nvim"]
+	path = src/moja-nvim
+	url = git@github.com:s10akir/moja-nvim
