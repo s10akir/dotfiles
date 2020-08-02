@@ -1,5 +1,7 @@
 [user]
 	name = Akira Shinohara
-	email = k017c1067@it-neec.jp
+	email = akira.shinohara@mojamoja.cloud
 [core]
 	editor = nvim
+[ghq]
+  root = .ghq
