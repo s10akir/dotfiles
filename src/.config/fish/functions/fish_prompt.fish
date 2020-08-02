@@ -1,1 +1,0 @@
-/home/s10akir/.local/share/omf/themes/ocean/fish_prompt.fish
