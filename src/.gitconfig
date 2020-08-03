@@ -5,3 +5,9 @@
 	editor = nvim
 [ghq]
   root = ~/.ghq
+[alias]
+	s = status
+	d = diff
+	a = add
+[pull]
+	ff = only
