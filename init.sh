@@ -11,6 +11,7 @@ ln -snfv $SCRIPT_DIR/src/.tmux.conf $HOME
 
 ONLY_LINUX="^(compton|i3|polybar)$"
 
+mkdir $HOME/.config
 for f in `ls $SCRIPT_DIR/src/.config/`; do
   rm -rf $HOME/.config/$f # DANGER
 
