@@ -1,0 +1,9 @@
+[user]
+	name = Akira Shinohara
+	email = akira.shinohara@mojamoja.cloud
+[alias]
+	s = status
+	d = diff
+	a = add
+[pull]
+	ff = only
