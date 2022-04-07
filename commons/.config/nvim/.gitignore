@@ -1,0 +1,6 @@
+# plugins cache
+pack/plugins/start/*
+!pack/plugins/start/.gitkeep
+
+pack/plugins/opt/*
+!pack/plugins/opt/.gitkeep
