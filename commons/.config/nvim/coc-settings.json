@@ -1,4 +1,10 @@
 {
+  "languageserver": {
+    "terraform": {
+      "command": "terraform-lsp",
+      "filetypes": ["terraform"]
+    }
+  },
   "codeLens.enable": true,
   "suggest.enablePreselect": true,
   "solargraph.checkGemVersion": false,
