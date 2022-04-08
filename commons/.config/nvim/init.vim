@@ -53,7 +53,8 @@ set ttimeoutlen=10
 " MEMO: カラースキームはtomlではうまくロードできない
 set termguicolors " 有効にするとSeiyaで透過できなくなる
 let g:airline_theme = "bubblegum"
-colorscheme panda
+let ayucolor="mirage"
+colorscheme ayu
 " ----- /colorscheme -----
 
 
