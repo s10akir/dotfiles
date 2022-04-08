@@ -8,5 +8,6 @@
   "codeLens.enable": true,
   "suggest.enablePreselect": true,
   "solargraph.checkGemVersion": false,
-  "solargraph.formatting": true
+  "solargraph.formatting": true,
+  "solargraph.useBundler": false
 }
