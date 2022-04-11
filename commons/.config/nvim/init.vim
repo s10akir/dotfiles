@@ -33,6 +33,8 @@ set shiftwidth=2
 set tabstop=2
 set softtabstop=2
 set smartindent
+" EOLが無いファイルを開いたら編集した場合のEOL自動付与を抑制
+set nofixeol
 " ----- /edit -----
 
 
