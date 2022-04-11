@@ -20,4 +20,5 @@ git clone https://github.com/vim-airline/vim-airline-themes.git
 git clone https://github.com/github/copilot.vim.git
 git clone https://github.com/ayu-theme/ayu-vim.git
 git clone https://github.com/nvim-treesitter/nvim-treesitter.git
+git clone https://github.com/hashivim/vim-terraform.git
 ```
