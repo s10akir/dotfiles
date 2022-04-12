@@ -22,7 +22,7 @@ key_bindings:
     action: ToggleSimpleFullscreen
   - key: N
     mods: Command
-    action: SpawnNewInstance
+    action: CreateNewWindow
 
 colors: # ayu-mirage
   # Default colors
