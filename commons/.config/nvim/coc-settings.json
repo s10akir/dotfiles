@@ -9,5 +9,6 @@
   "suggest.enablePreselect": true,
   "solargraph.checkGemVersion": false,
   "solargraph.formatting": true,
-  "solargraph.useBundler": false
+  "solargraph.useBundler": true,
+  "solargraph.diagnostics": true
 }
