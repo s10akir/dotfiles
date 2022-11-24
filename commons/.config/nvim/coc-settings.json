@@ -10,5 +10,18 @@
   "solargraph.checkGemVersion": false,
   "solargraph.formatting": true,
   "solargraph.useBundler": true,
-  "solargraph.diagnostics": true
+  "solargraph.diagnostics": true,
+  "cSpell.enabledLanguageIds": [
+    "csharp",
+    "go",
+    "javascript",
+    "javascriptreact",
+    "markdown",
+    "php",
+    "plaintext",
+    "ruby",
+    "typescript",
+    "typescriptreact",
+    "yml"
+  ]
 }
