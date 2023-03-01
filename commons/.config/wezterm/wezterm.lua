@@ -3,8 +3,15 @@ local act = wezterm.action
 
 return {
   -- 見た目関連
-  font = wezterm.font("Cica", { weight="Regular", stretch="Normal", style="Normal" }),
-  font_with_fallback = wezterm.font("Cica", { weight="Regular", stretch="Normal", style="Normal" }),
+  font = wezterm.font_with_fallback({
+    -- primary font
+    { family = "Cica", weight = "Regular" },
+
+    -- emoji fallback font
+    -- NOTE: テキスト用とは別で assume_emoji_presentation を明示的に指定しないと
+    --       Cicaの持っているNerdFontが使われずに後続fallback（weztermデフォルトのNoto Color Emoji）が使われてしまう
+    { family = "Cica", assume_emoji_presentation = true },
+  }),
   font_size = 17.0,
   color_scheme = "Ayu Mirage",
   window_background_opacity = 1,
