@@ -45,6 +45,9 @@ return {
     { mods = "SUPER",  key = "-",     action = act.DecreaseFontSize                          },
     { mods = "SUPER",  key = "0",     action = act.ResetFontSize                             },
 
+    -- workspaces
+    { mods = "LEADER", key = "s",     action = act.ShowLauncherArgs {flags = "WORKSPACES" }  },
+
     -- travels
     { mods = "LEADER", key = "h",     action = act.ActivatePaneDirection("Left")             },
     { mods = "LEADER", key = "j",     action = act.ActivatePaneDirection("Down")             },
