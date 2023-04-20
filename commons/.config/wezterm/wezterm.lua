@@ -2,6 +2,8 @@ local wezterm = require 'wezterm'
 local act = wezterm.action
 
 return {
+  default_domain = "unix",
+
   -- 見た目関連
   font = wezterm.font_with_fallback({
     -- primary font
@@ -10,9 +12,13 @@ return {
     -- emoji fallback font
     -- NOTE: テキスト用とは別で assume_emoji_presentation を明示的に指定しないと
     --       Cicaの持っているNerdFontが使われずに後続fallback（weztermデフォルトのNoto Color Emoji）が使われてしまう
-    { family = "Cica", assume_emoji_presentation = true },
+    { family = "Cica", weight = "Regular", assume_emoji_presentation = true },
+
+    -- secondary emoji fallback font
+    -- NOTE: Cicaがもっていない絵文字用
+    { family = "Twemoji Mozilla"},
   }),
-  font_size = 17.0,
+  font_size = 17,
   color_scheme = "Ayu Mirage",
   window_background_opacity = 1,
   window_padding = {
