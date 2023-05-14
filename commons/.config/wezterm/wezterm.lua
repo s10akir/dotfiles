@@ -4,6 +4,30 @@ local act = wezterm.action
 return {
   default_domain = "unix",
 
+  window_background_opacity = 0.6,
+  background = {
+    {
+      source = {
+        Color = "242936",
+      },
+      width = "100%",
+      height = "100%",
+    },
+    {
+      source = {
+        File = {
+          -- https://twitter.com/kaynimatic/status/1294982862710611968
+          path = wezterm.config_dir .. "/pekora.gif",
+        }
+      },
+      vertical_align = "Bottom",
+      horizontal_align = "Right",
+      height = "810",
+      width = "1518",
+      repeat_x = "NoRepeat",
+    },
+  },
+
   -- 見た目関連
   font = wezterm.font_with_fallback({
     -- primary font
@@ -75,4 +99,3 @@ return {
     { mods = "LEADER", key = "c",     action = act.SpawnTab("CurrentPaneDomain")             },
   },
 }
-
