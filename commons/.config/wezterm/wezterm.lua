@@ -65,7 +65,7 @@ return {
     -- pane managements
     { mods = "LEADER", key = "-",     action = act.SplitVertical                             },
     { mods = "LEADER", key = "|",     action = act.SplitHorizontal                           },
-    { mods = "LEADER", key = "z",     action = act.TogglePaneZoomState                       },
+    -- { mods = "LEADER", key = "z",     action = act.TogglePaneZoomState                       },
     { mods = 'LEADER', key = 'H',     action = act.AdjustPaneSize { 'Left', 2 }              },
     { mods = 'LEADER', key = 'J',     action = act.AdjustPaneSize { 'Down', 2 }              },
     { mods = 'LEADER', key = 'K',     action = act.AdjustPaneSize { 'Up', 2 }                },
