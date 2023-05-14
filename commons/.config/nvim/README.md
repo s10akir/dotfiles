@@ -23,4 +23,5 @@ git clone https://github.com/hashivim/vim-terraform.git
 git clone https://github.com/digitaltoad/vim-pug.git
 git clone https://github.com/dNitro/vim-pug-complete.git
 git clone https://github.com/rebelot/kanagawa.nvim.git
+git clone https://github.com/dag/vim-fish.git
 ```
